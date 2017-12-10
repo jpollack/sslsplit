@@ -63,7 +63,7 @@ ec.key:
 	$(OPENSSL) req -new -nodes -x509 $(DIGEST) -out $@ -key $< \
 		-config $(CONFIG) -extensions $(CA_EXT) \
 		-subj $(CA_SUBJECT) \
-		-set_serial 0 -days $(CA_DAYS)
+		-set_serial 1 -days $(CA_DAYS)
 
 server.key:
 	$(OPENSSL) genrsa -out $@ 2048
